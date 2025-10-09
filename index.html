@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Porfolio | Nacho Uceda</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="#inicio" class="logo"> Nacho Uceda</a>
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#formacion">Formación</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li class="cv"><a href="./CV-Nacho-Uceda.pdf" onclick="window.open('./CV-Nacho-Uceda.pdf'); return false;">Descargar CV</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+        
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-text">
+                <h1>¡Hola! soy Nacho Uceda</h1>
+                <p>Técnico Superior en Administración de Sistemas Informáticos en Red</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/nachouc/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/NachoUc" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-mi">
+            <h2>Sobre Mí</h2>
+            <div class="about-container">
+                <p>
+                    Soy un profesional proactivo y responsable, con gran capacidad de aprendizaje y adaptación a nuevos retos. Me caracterizo por mi trato amable, cordial, honesto, mi compromiso con la puntualidad y el trabajo en equipo.
+                </p>
+            </div>
+        </section>
+
+        <section id="habilidades">
+            <h2>Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-server"></i>
+                    <h3>Sistemas Operativos</h3>
+                    <p>Linux (Debian, Ubuntu, CentOS, Kali), Windows Server, Bash Scripting, PowerShell</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Redes</h3>
+                    <p>TCP/IP, Switching, Routing, VLANs, Firewalls, DNS, DHCP, Cisco, Fortinet</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Cloud & Virtualización</h3>
+                    <p>Docker, VirtualBox, Hyper-V, Proxmox, AWS, Azure, Proxmox, Docker</p>
+                </div>
+                 <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Bases de Datos</h3>
+                    <p>MySQL, MariaDB, PostgreSQL</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-shield-halved"></i>
+                    <h3>Seguridad</h3>
+                    <p>John the Ripper, Nmap, Wireshark, Anongt, Tor, Bruteforce</p>
+                </div>
+                 <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Otros</h3>
+                    <p>Hack The Box, Docker Labs, Cyber Defenders, Pwned, The Hacker Labs</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos">
+            <h2>Proyectos Destacados</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>PyLan 2</h3>
+                    <p>Es un Script de Python que realiza un escaneo de red para descubrir los dispositivos activos en tu LAN. Identifica sus direcciones IP y MAC. Incluye una función (BETA) para detectar el Sistema Operativo.</p>
+                    <div class="project-tags">
+                        <span>Linux</span><span>Python</span><span>Redes</span><span>Scapy</span>
+                    </div>
+                    <a href="https://github.com/NachoUc/Pylan2" class="project-link" target="_blank">Ver en GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>StartedPack</h3>
+                    <p>StartedPack es un script esencial para cualquier sistema Linux (Ubuntu, Kali y derivados) diseñado para mantenerlo limpio, actualizado y funcionando de manera óptima desde el primer momento.</p>
+                    <div class="project-tags">
+                        <span>Shell</span><span>Bash</span><span>Linux</span><span>Optimización</span>
+                    </div>
+                    <a href="https://github.com/NachoUc/StartedPack" class="project-link" target="_blank">Ver en GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h3>Apex System 2</h3>
+                    <p>Script con PowerShell para la Optimización y Mantenimiento de equipos Windows 10/11</p>
+                    <div class="project-tags">
+                        <span>PowerShell</span><span>Windows</span><span>Optimización</span><span>Visor de errores</span>
+                    </div>
+                    <a href="https://github.com/NachoUc/ApexSystem2" class="project-link" target="_blank">Ver en GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section experience" id="formacion">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Formación y Experiencia</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Grado Superior en ASIR</h3>
+                            <p class="timeline-date">2024 - Actualidad</p>
+                            <p>IES El Grao</p>
+                            <p>Estudiando administración de sistemas, RedHat, redes, bases de datos con PostgreSQL y ciberseguridad.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Prácticas en la Fundación General Universidad de Valencia</h3>
+                            <p class="timeline-date">Mayo 2025 - Junio 2025</p>
+                            <p>Soporte técnico, mantenimiento de equipos, creación de maquinas virtuales con Hyper-V y creación de Firewalls con switches Fortinet.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Grado Medio en Sistemas Microinformáticos y Redes</h3>
+                            <p class="timeline-date">2022 - 2024</p>
+                            <p>IES Juan de Garay</p>
+                            <p>Fundamentos de redes, html, css, ciberseguridad, bases de datos con mysql, scripts en bash y PowerShell, administración de grupos y usuarios en Windows Server.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Prácticas en Broseta Abogados</h3>
+                            <p class="timeline-date">marzo 2024 - agosto 2024</p>
+                            <p>Soporte técnico a usuarios con Supremo, gestion de equipos y aplicaciones con Jira Service, proyectos de migración de información local a nube, configuración de aplicaciones y FortiVPN.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Interesado en mi perfil? ¡Hablemos!</p>
+        <p>Email: <a href="mailto:nacho20esp@gmail.com">nacho20esp@gmail.com</a></p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/nachouc/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/NachoUc" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+
+</body>
+</html>
