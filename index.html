@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Porfolio profesional de Nacho Uceda, Técnico Superior en Administración de Sistemas Informáticos en Red (ASIR). Descubre mis proyectos, habilidades y experiencia.">
     <title>Mi Porfolio | Nacho Uceda</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -18,10 +19,10 @@
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#formacion">Formación</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-                <li class="cv"><a href="./CV-Nacho-Uceda.pdf" onclick="window.open('./CV-Nacho-Uceda.pdf'); return false;">Descargar CV</a></li>
+                <li class="cv"><a href="./CV-Nacho-Uceda.pdf" target="_blank" rel="noopener noreferrer">Descargar CV</a></li>
             </ul>
         </nav>
-        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
             <i class="fas fa-bars"></i>
         </button>
     </header>
@@ -32,8 +33,8 @@
                 <h1>¡Hola! soy Nacho Uceda</h1>
                 <p>Técnico Superior en Administración de Sistemas Informáticos en Red</p>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/nachouc/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/NachoUc" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/nachouc/" target="_blank" aria-label="Visita el perfil de LinkedIn de Nacho Uceda"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/NachoUc" target="_blank" aria-label="Visita el perfil de GitHub de Nacho Uceda"><i class="fab fa-github"></i></a>
                 </div>
             </div>
         </section>
@@ -63,7 +64,7 @@
                 <div class="skill-card">
                     <i class="fas fa-cloud"></i>
                     <h3>Cloud & Virtualización</h3>
-                    <p>Docker, VirtualBox, Hyper-V, Proxmox, AWS, Azure, Proxmox, Docker</p>
+                    <p>Docker, VirtualBox, Hyper-V, Proxmox, AWS, Azure</p>
                 </div>
                  <div class="skill-card">
                     <i class="fas fa-database"></i>
@@ -121,6 +122,13 @@
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-content">
+                            <h3>Prácticas en la Fundación General Universidad de Valencia</h3>
+                            <p class="timeline-date">Mayo 2025 - Junio 2025</p>
+                            <p>Soporte técnico, mantenimiento de equipos, creación de maquinas virtuales con Hyper-V y creación de Firewalls con switches Fortinet.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
                             <h3>Grado Superior en ASIR</h3>
                             <p class="timeline-date">2024 - Actualidad</p>
                             <p>IES El Grao</p>
@@ -129,9 +137,9 @@
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-content">
-                            <h3>Prácticas en la Fundación General Universidad de Valencia</h3>
-                            <p class="timeline-date">Mayo 2025 - Junio 2025</p>
-                            <p>Soporte técnico, mantenimiento de equipos, creación de maquinas virtuales con Hyper-V y creación de Firewalls con switches Fortinet.</p>
+                            <h3>Prácticas en Broseta Abogados</h3>
+                            <p class="timeline-date">Marzo 2024 - Agosto 2024</p>
+                            <p>Soporte técnico a usuarios con Supremo, gestion de equipos y aplicaciones con Jira Service, proyectos de migración de información local a nube, configuración de aplicaciones y FortiVPN.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -140,13 +148,6 @@
                             <p class="timeline-date">2022 - 2024</p>
                             <p>IES Juan de Garay</p>
                             <p>Fundamentos de redes, html, css, ciberseguridad, bases de datos con mysql, scripts en bash y PowerShell, administración de grupos y usuarios en Windows Server.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Prácticas en Broseta Abogados</h3>
-                            <p class="timeline-date">marzo 2024 - agosto 2024</p>
-                            <p>Soporte técnico a usuarios con Supremo, gestion de equipos y aplicaciones con Jira Service, proyectos de migración de información local a nube, configuración de aplicaciones y FortiVPN.</p>
                         </div>
                     </div>
                 </div>
@@ -159,25 +160,45 @@
         <p>¿Interesado en mi perfil? ¡Hablemos!</p>
         <p>Email: <a href="mailto:nacho20esp@gmail.com">nacho20esp@gmail.com</a></p>
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/nachouc/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/NachoUc" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/nachouc/" target="_blank" aria-label="Visita el perfil de LinkedIn de Nacho Uceda"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/NachoUc" target="_blank" aria-label="Visita el perfil de GitHub de Nacho Uceda"><i class="fab fa-github"></i></a>
         </div>
     </footer>
 
     <script>
         const menuToggle = document.getElementById('menu-toggle');
-        const navLinks = document.querySelector('.nav-links');
+        const navLinksContainer = document.querySelector('.nav-links');
+        const navLinks = document.querySelectorAll('.nav-links li a');
+        const icon = menuToggle.querySelector('i');
 
+        // Función para cerrar el menú
+        function closeMenu() {
+            navLinksContainer.classList.remove('active');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+
+        // Evento para abrir/cerrar con el botón
         menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            const icon = menuToggle.querySelector('i');
-            if (icon.classList.contains('fa-bars')) {
+            const isExpanded = navLinksContainer.classList.toggle('active');
+            if (isExpanded) {
                 icon.classList.remove('fa-bars');
                 icon.classList.add('fa-times');
+                menuToggle.setAttribute('aria-expanded', 'true');
             } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+                closeMenu();
             }
+        });
+
+        // Evento para cerrar el menú al hacer clic en un enlace
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Solo cerramos si el menú está visible (en móvil)
+                if (navLinksContainer.classList.contains('active')) {
+                    closeMenu();
+                }
+            });
         });
     </script>
 

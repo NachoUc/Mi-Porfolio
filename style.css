@@ -25,6 +25,14 @@ body {
     color: var(--text-color);
 }
 
+/* Mejora de accesibilidad: Indicador de foco visible */
+:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+
 /* Header y Navegación */
 header {
     background: var(--dark-color);
@@ -49,6 +57,7 @@ header {
 .nav-links {
     list-style: none;
     display: flex;
+    align-items: center; /* Alinear verticalmente el botón de CV */
 }
 
 .nav-links li {
@@ -61,13 +70,12 @@ header {
     font-weight: 600;
     transition: color 0.3s;
     padding: 0.5rem 0;
+    border-radius: 4px; /* Para que el foco se vea mejor */
 }
 
 .nav-links li a:hover {
     color: var(--primary-color);
 }
-
-
 
 .menu-toggle {
     display: none; /* Oculto en escritorio */
@@ -76,6 +84,7 @@ header {
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
+    border-radius: 4px; /* Para que el foco se vea mejor */
 }
 
 /* Secciones Generales */
@@ -128,6 +137,8 @@ section h2::after {
     font-size: 2rem;
     margin: 0 15px;
     transition: color 0.3s;
+    display: inline-block; /* Para que el foco se vea bien */
+    border-radius: 50%;   /* Para que el foco se vea bien */
 }
 
 .social-links a:hover {
@@ -343,6 +354,7 @@ footer p {
 footer a {
     color: var(--primary-color);
     text-decoration: none;
+    border-radius: 4px;
 }
 
 /* =================================================================
