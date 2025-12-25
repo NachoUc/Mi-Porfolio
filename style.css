@@ -9,6 +9,7 @@
     --text-color: #34495e;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
+    --aws-orange: #FF9900;
 }
 
 * {
@@ -57,7 +58,7 @@ header {
 .nav-links {
     list-style: none;
     display: flex;
-    align-items: center; /* Alinear verticalmente el botón de CV */
+    align-items: center; 
 }
 
 .nav-links li {
@@ -70,7 +71,7 @@ header {
     font-weight: 600;
     transition: color 0.3s;
     padding: 0.5rem 0;
-    border-radius: 4px; /* Para que el foco se vea mejor */
+    border-radius: 4px; 
 }
 
 .nav-links li a:hover {
@@ -78,13 +79,13 @@ header {
 }
 
 .menu-toggle {
-    display: none; /* Oculto en escritorio */
+    display: none; 
     background: none;
     border: none;
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
-    border-radius: 4px; /* Para que el foco se vea mejor */
+    border-radius: 4px; 
 }
 
 /* Secciones Generales */
@@ -113,7 +114,7 @@ section h2::after {
     border-radius: 2px;
 }
 
-/* Hero Section */
+
 .hero {
     min-height: 100vh;
     display: flex;
@@ -137,8 +138,8 @@ section h2::after {
     font-size: 2rem;
     margin: 0 15px;
     transition: color 0.3s;
-    display: inline-block; /* Para que el foco se vea bien */
-    border-radius: 50%;   /* Para que el foco se vea bien */
+    display: inline-block; 
+    border-radius: 50%;   
 }
 
 .social-links a:hover {
@@ -146,47 +147,70 @@ section h2::after {
 }
 
 /* Sobre Mí */
-.about-container {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.1rem;
+.about-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 4rem; 
+    text-align: left; 
+    align-items: center;
+    margin-top: 2rem;
 }
+.about-description p { margin-bottom: 1.5rem; font-size: 1.1rem; }
 
-/* Habilidades */
-#habilidades {
+.offer-list { list-style: none; padding: 0; }
+.offer-list li { 
+    display: flex; 
+    align-items: flex-start; 
+    margin-bottom: 1.5rem; 
+    padding: 1rem;
     background: var(--light-color);
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.skill-card {
-    background: var(--background-color);
-    padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: var(--transition);
+}
+.offer-list li:hover { transform: translateX(10px); background: #fff; box-shadow: var(--shadow); }
+.offer-list i { font-size: 1.5rem; color: var(--primary-color); margin-right: 15px; margin-top: 5px; }
+
+/* HABILIDADES */
+#habilidades { background: var(--light-color); }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
+.skill-card { background: white; padding: 2.5rem 1.5rem; border-radius: 15px; box-shadow: var(--shadow); transition: var(--transition); }
+.skill-card:hover { transform: translateY(-10px); }
+.skill-card i { font-size: 3rem; color: var(--primary-color); margin-bottom: 1.5rem; }
+
+.skill-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 1rem; }
+.skill-tags span { 
+    background: #e9ecef; 
+    padding: 4px 12px; 
+    border-radius: 20px; 
+    font-size: 0.85rem; 
+    font-weight: 500; 
+    border: 1px solid rgba(0,0,0,0.05); 
 }
 
-.skill-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+/* Especial AWS */
+.cert-card { border-top: 5px solid var(--aws-orange); }
+.cert-card i { color: var(--aws-orange) !important; }
+.cert-title { font-weight: 700; color: var(--dark-color); margin: 0.5rem 0; }
+
+/* --- FOOTER --- */
+footer { background: var(--dark-color); color: white; padding: 4rem 5%; }
+footer a { color: var(--primary-color); text-decoration: none; }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    header { padding: 1rem 2rem; }
 }
 
-.skill-card i {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.skill-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: var(--dark-color);
+@media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    .nav-links { 
+        display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; 
+        background: var(--dark-color); flex-direction: column; justify-content: center; 
+    }
+    .nav-links.active { display: flex; }
+    .nav-links li { margin: 1.5rem 0; }
+    .hero-text h1 { font-size: 2.5rem; }
 }
 
 /* Proyectos */
