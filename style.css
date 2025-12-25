@@ -155,7 +155,10 @@ section h2::after {
     align-items: center;
     margin-top: 2rem;
 }
-.about-description p { margin-bottom: 1.5rem; font-size: 1.1rem; }
+.about-description p { 
+    margin-bottom: 1.5rem; 
+    font-size: 20px; 
+}
 
 .offer-list { list-style: none; padding: 0; }
 .offer-list li { 
@@ -454,4 +457,5 @@ footer a {
     .timeline-item:nth-child(even)::after {
         left: 21px;
     }
+
 }
